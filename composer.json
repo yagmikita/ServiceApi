@@ -1,0 +1,32 @@
+{
+    "name": "yagmikita/framework",
+    "type": "library",
+    "keywords": [
+        "pb-tickets-api",
+	"privatbank",
+	"tickets",
+	"php-5.4",
+	"psr-0"
+    ],
+    "authors": [
+        {
+            "name": "Gopkalo Nikita",
+            "email": "yagmikita@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "phpunit/PHPUnit": "3.7.*",
+        "psr/log": "dev-master",
+        "Zend/Loader": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "psr\\": "vendor/",
+            "Zend\\": "vendor/",
+            "PrivatBank\\": "vendor/",
+            "PrivatBankTest\\": "tests/"
+        }
+    }
+}
