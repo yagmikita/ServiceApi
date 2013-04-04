@@ -105,28 +105,4 @@ class StringTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($res == $sample);
     }
 
-    /*public function bad2()
-    {
-        return array(
-            array(
-                array(
-                    'phone' => '380957700418',
-                    'age' => '26',
-                ),
-                'phone=380957700418&age=26',
-            ),
-            array(
-                array(),
-                ''
-            ),
-        );
-    }
-    **
-     * @dataProvider bad2
-     *
-    public function testUrlConcatContextWorksWrong($context, $sample)
-    {
-
-    }*/
-
 }
