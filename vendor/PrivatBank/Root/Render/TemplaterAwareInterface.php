@@ -15,7 +15,7 @@ interface TemplaterAwareInterface
      * @param PrivatBank\Root\Render\Template $template
      * @return null;
      */
-    public function setTemplater(TemplaterInterface $templater);
+    public function setTemplater(TemplaterInterface $templater = null);
 
     /**
      * @return PrivatBank\Root\Render\Template

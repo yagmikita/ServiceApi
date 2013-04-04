@@ -1,6 +1,6 @@
 <?php
 
-namespace Privatbank\Root\Executor;
+namespace PrivatBank\Root\Executor;
 
 class ExecutorFactory
 {

@@ -1,12 +1,15 @@
 <phpunit bootstrap="./bootstrap.php" colors="true">
     <testsuites>
-        <testsuite name="PrivatBankTest">
+        <testsuite name="PrivatBankTestLib">
             <directory>./PrivatBankTest/Root/Log</directory>
             <directory>./PrivatBankTest/Root/Error</directory>
             <directory>./PrivatBankTest/Root/Render</directory>
             <directory>./PrivatBankTest/Root/Helper</directory>
             <directory>./PrivatBankTest/Root/Executor</directory>
             <directory>./PrivatBankTest/Root/Service</directory>
+        </testsuite>
+        <testsuite name="PrivatBankTestApi">
+            <directory>./PrivatBankTest/Api/Ticket</directory>
         </testsuite>
     </testsuites>
 

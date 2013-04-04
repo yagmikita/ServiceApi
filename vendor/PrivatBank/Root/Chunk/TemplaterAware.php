@@ -21,9 +21,9 @@ trait TemplaterAware
      * @param PrivatBank\Root\Render\Template $template
      * @return null;
      */
-    public function setTemplater(TemplaterInterface $templater)
+    public function setTemplater(TemplaterInterface $templater = null)
     {
-        $this->_templater = is_null($templater) ? new Template : $templater;
+        $this->_templater = is_null($templater) ? new Templater : $templater;
     }
 
     /**
