@@ -9,6 +9,8 @@ use Psr\Log\LoggerInterface as LoggerInterface,
 
 abstract class AbstractServiceXmlRequest extends AbstractService
 {
+    const XML_HEADER_PRIVAT = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
+
     public function __construct(
         array $params = array(),
         ErrorHandlerInterface $errorHandler = null,

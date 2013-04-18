@@ -1,8 +1,20 @@
 array (
-  'success' => '<?xml version="1.0" encoding="utf-8"?><Response><status>OK</status><amount>50000</amount><checksum>424bc15c678ee888641311f83367f0f6</checksum><week>2</week></Response>',
+  'success' => '<?xml version="1.0" encoding="utf-8"?>
+<Response>
+  <status code="400">ERROR</status>
+  <message>Wrong phone format</message>
+</Response>',
 )
 
 array (
-  'success' => '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><id value="130404PL0nkjb4bbdpaa"/>',
+  'success' => '<?xml version="1.0" encoding="utf-8"?>
+<Response>
+  <status code="400">ERROR</status>
+  <message>This phone number does not exists</message>
+</Response>',
+)
+
+array (
+  'success' => '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><id value="130417PL0d43u6cmgfaa"/>',
 )
 

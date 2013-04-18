@@ -6,17 +6,12 @@ use PrivatBank\Root\Error\ErrorHandler as ErrorHandler,
     PrivatBank\Root\Render\Templater as Templater,
     PrivatBank\Root\Log\FileLogger as FileLogger,
     Privatbank\Root\Executor\Curl as Curl,
-    PrivatBankTest\Root\Service\Dummy\DummyXmlServiceXForm as DummyXmlServiceXForm;
+    PrivatBankTest\Root\Service\Dummy\DummyXmlServiceUrl as DummyXmlServiceUrl;
 
-/**
- * @todo write a moke for self::services() with the help of
- *       PHPUnit :: getMokeForAbstractClass(), like here:
- *       http://stackoverflow.com/questions/190295/testing-abstract-classes#answer-2241159
- */
-class AbstractServiceXmlRequestXFormTest extends \PHPUnit_Framework_TestCase
+class AbstractServiceXmlRequestUrlTest extends \PHPUnit_Framework_TestCase
 {
     protected $_service;
-    protected $_className = 'PrivatBank\Root\Service\AbstractServiceXmlRequestXForm';
+    protected $_className = 'PrivatBank\Root\Service\AbstractServiceXmlRequestUrl';
     protected $_options;
 
     /**
@@ -27,7 +22,7 @@ class AbstractServiceXmlRequestXFormTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->_service = new DummyXmlServiceXForm(
+        $this->_service = new DummyXmlServiceUrl(
             $this->_options()['params'],
             $this->_options()['errorHandler'],
             $this->_options()['logger'],
@@ -50,7 +45,7 @@ class AbstractServiceXmlRequestXFormTest extends \PHPUnit_Framework_TestCase
     public function testRequestResponseIsOk()
     {
         $this->_service->setParams(array(
-            'phone' => '380957700418',
+            'what' => 'Amount',
         ));
         $this->_service->request();
         $response = $this->_service->response();
@@ -87,7 +82,7 @@ class AbstractServiceXmlRequestXFormTest extends \PHPUnit_Framework_TestCase
             'errorHandler' => new ErrorHandler,
             'logger' => new FileLogger($this->_filename()),
             'templater' => new Templater,
-            'mode' => 'prod',
+            'mode' => 'dev',
         );
         return $this->_options;
     }

@@ -39,7 +39,6 @@ trait ExecutorAware
     {
         $this->_executor->setOptions(count($options) ? $options : $this->options());
         $this->_response = $this->_executor->execute();
-        //var_dump($this->_response);
         return (bool)$this->_response;
     }
 

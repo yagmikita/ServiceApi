@@ -6,6 +6,7 @@ use PrivatBank\Root\Error\ErrorHandler as ErrorHandler,
     Privatbank\Root\Executor\Content as Content,
     PrivatBank\Root\Log\FileLogger as FileLogger,
     PrivatBank\Root\Render\Templater as Templater,
+    PrivatBank\Root\Helper\Converter\ArrayToXml,
     PrivatBankTest\Root\Service\Dummy\DummyXmlServiceXml as DummyXmlServiceXml;
 
 /**
@@ -36,6 +37,7 @@ class AbstractServiceXmlRequestXmlTest extends \PHPUnit_Framework_TestCase
             $this->_options()['errorHandler'],
             $this->_options()['logger'],
             $this->_options()['templater'],
+            $this->_options()['converter'],
             $this->_options()['mode']
         );
     }
@@ -88,6 +90,7 @@ class AbstractServiceXmlRequestXmlTest extends \PHPUnit_Framework_TestCase
             'errorHandler' => new ErrorHandler,
             'logger' => new FileLogger($this->_filename()),
             'templater' => new Templater,
+            'converter' => new ArrayToXml,
             'mode' => 'dev',
         );
         return $this->_options;
