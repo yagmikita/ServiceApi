@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<request>
+<body test2="321" test3="987">
+    <rows>
+        <my-row test4="564">
+            <types>
+                <custom>this is the example of the text</custom>
+                <Generic arch="simple">this is the example of the text</Generic>
+                <bold/>
+                <italic/>
+                <underlined/>
+            </types>
+        </my-row>
+        <my-row test5="565"/>
+        <test hidden="false" ready="true"/>
+    </rows>
+</body>
+</request>

@@ -8,7 +8,7 @@ class SessionCheck extends AbstractServiceXmlRequestUrl
 {
     use SetServices;
 
-    public function template($glue = null)
+    public function template()
     {
         return "/sessions/get/{{sid}}";
     }
